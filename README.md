@@ -71,7 +71,7 @@
 
 2. ngrokを利用してサーバーを公開します。
 
-　　```bash
+   ```bash
    ngrok http 9999 --subdomain=<your_subdomain_name>
    ```
 
