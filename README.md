@@ -26,8 +26,8 @@
 1. リポジトリをクローンします。
 
    ```bash
-   git clone https://github.com/yourusername/WebSocketConversationRelay.git
-   cd WebSocketConversationRelay
+   git clone https://github.com/MitsuharuNakamura/conversationRelayDemo.git
+   cd conversationRelayDemo
    ```
 
 2. 必要なパッケージをインストールします。
@@ -124,8 +124,8 @@ This project sets up a WebSocket server to communicate with OpenAI's API, mainta
 1. Clone the repository.
 
    ```bash
-   git clone https://github.com/yourusername/WebSocketConversationRelay.git
-   cd WebSocketConversationRelay
+   git clone https://github.com/MitsuharuNakamura/conversationRelayDemo.git
+   cd conversationRelayDemo
    ```
 
 2. Install required packages.
