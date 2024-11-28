@@ -1,7 +1,8 @@
 # Conversation Relay with Open AI API
 
-このプロジェクトは、WebSocketを使用してOpenAIのAPIと通信し、会話の履歴を保持しながらリアルタイムで応答を返すサーバーです。
-このREADMEでは、AIは日本語を話す前提で設定されています。
+このプロジェクトは、TwilioのConversatioRelay機能を使って自前のWebsocketサーバと連携し、そこからOpen AIと連携することでリアルタイムに
+電話で話した内容をOpen AIにつなぐことで自然な会話をAIと行うことができます。
+このプロジェクトでは、AIは日本語を話す前提で設定されています。
 
 ## 概要
 
@@ -101,7 +102,9 @@
 
 # Conversation Relay with Open AI API
 
-This project sets up a WebSocket server to communicate with OpenAI's API, maintaining conversation history and providing real-time responses. In this README, the AI is configured to communicate in Japanese.
+This project leverages Twilio's ConversatioRelay feature to integrate with a self-hosted WebSocket server, which in turn connects to OpenAI. This setup enables real-time interaction with OpenAI based on conversations over the phone, allowing for natural AI-driven dialogue.
+In this Project, the AI is configured to operate with Japanese as the primary language.
+
 
 ## Overview
 
