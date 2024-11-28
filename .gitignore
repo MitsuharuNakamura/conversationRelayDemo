@@ -1,0 +1,17 @@
+# Node.js関連
+node_modules/
+npm-debug.log
+yarn-error.log
+
+# 環境変数ファイル
+.env
+
+# OSやエディタ関連
+.DS_Store
+Thumbs.db
+.idea/
+.vscode/
+*.swp
+
+# 個人的なやつ
+Twiml_bins/
