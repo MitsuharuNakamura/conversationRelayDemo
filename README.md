@@ -144,7 +144,7 @@ In this Project, the AI is configured to operate with Japanese as the primary la
    ```plaintext
    PORT=9999
    OPENAI_API_KEY=your_openai_api_key
-   SYSTEM_PROMPT=You are a call center operator. The input text is speech recognition data. Please respond in a polite and conversational manner.
+   SYSTEM_PROMPT=あなたは、コールセンターのオペレーターです。入力文は音声認識データです。丁寧な口語調で返答してください。
    ```
 
    - Replace `your_openai_api_key` with your actual OpenAI API key.
