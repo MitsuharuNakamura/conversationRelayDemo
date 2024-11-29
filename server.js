@@ -4,9 +4,11 @@ const OpenAI = require('openai');
 
 const port = process.env.PORT || 9999;
 const open_ai_api_key = process.env.OPENAI_API_KEY;
+const sentenceDelimiterRegex = /(?<=[。、])/; // Japanese sentense delimiter
+//const sentenceDelimiterRegex = /(?<=[.!?])\s+/; // English sentense delimiter
 
 const wss = new WebSocket.Server({ port: port });
-console.log(`WebSocket server is running on ws://localhost:${port}`);
+console.log(`WebSocket server is running on wss://localhost:${port}`);
 
 const openai = new OpenAI({
     apiKey: open_ai_api_key,
@@ -32,7 +34,7 @@ wss.on('connection', (ws) => {
                 conversationHistory.push({ role: 'user', content: question });
 
                 const stream = await openai.chat.completions.create({
-                    model: 'gpt-4o-mini', // または 'gpt-4o-mini'
+                    model: 'gpt-4o-mini',
                     messages: conversationHistory,
                     stream: true,
                 });
@@ -43,8 +45,10 @@ wss.on('connection', (ws) => {
                     const message = chunk.choices[0]?.delta?.content;
                     if (message) {
                         buffer += message;
-                        let sentences = buffer.split(/(?<=[。、])/);
-                        buffer = sentences.pop(); // 最後の未完了の文をバッファに残す
+                        //let sentences = buffer.split(/(?<=[。、])/);
+                        let sentences = buffer.split(sentenceDelimiterRegex);
+
+                        buffer = sentences.pop();
                         for (const sentence of sentences) {
                             console.log("DEBUG: " + sentence);
                             ws.send(JSON.stringify({ type: 'text', token: sentence, last: true }));
