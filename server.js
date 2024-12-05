@@ -55,6 +55,11 @@ wss.on('connection', (ws) => {
                         }
                     }
                 }
+                // Send the remaining content in the buffer after the stream ends
+                if (buffer) {
+                    console.log("DEBUG: " + buffer);
+                    ws.send(JSON.stringify({ type: 'text', token: buffer, last: true }));
+                }
 
                 // AIの回答を会話履歴に追加
                 conversationHistory.push({ role: 'assistant', content: buffer });
