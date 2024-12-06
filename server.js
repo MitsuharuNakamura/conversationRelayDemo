@@ -4,7 +4,7 @@ const OpenAI = require('openai');
 
 const port = process.env.PORT || 9999;
 const open_ai_api_key = process.env.OPENAI_API_KEY;
-const sentenceDelimiterRegex = /(?<=[。、])/; // Japanese sentense delimiter
+const sentenceDelimiterRegex = /(?<=[。、？])/; // Japanese sentense delimiter
 //const sentenceDelimiterRegex = /(?<=[.!?])\s+/; // English sentense delimiter
 
 const wss = new WebSocket.Server({ port: port });
