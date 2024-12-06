@@ -28,7 +28,7 @@ wss.on('connection', (ws) => {
         try {
             const parsedMessage = JSON.parse(message);
 
-            if (parsedMessage.hasOwnProperty('voicePrompt')) {
+            if(parsedMessage.type === 'prompt'){
                 const question = parsedMessage.voicePrompt;
                 // ユーザーの質問を会話履歴に追加
                 conversationHistory.push({ role: 'user', content: question });
