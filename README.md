@@ -1,8 +1,8 @@
-# Conversation Relay with Open AI API
 
 このプロジェクトは、TwilioのConversatioRelay機能を使って自前のWebsocketサーバと連携し、そこからOpen AIと連携することでリアルタイムに
 電話で話した内容をOpen AIにつなぐことで自然な会話をAIと行うことができます。
 このプロジェクトでは、AIは日本語を話す前提で設定されています。
+# Conversation Relay with Open AI API
 
 ## 概要
 
@@ -53,7 +53,7 @@
    <?xml version="1.0" encoding="UTF-8"?>
     <Response>
        <Connect>
-         <ConversationRelay url="wss://<subdomain_name>.jp.ngrok.io" language="ja-JP" welcomeGreeting="もしもし。こちらは。旅行アシスタントです。ご要件をお話ください。" ttsProvider="google" voice="Google.ja-JP-Standard-B"  />
+         <ConversationRelay url="wss://<subdomain_name>.jp.ngrok.io" language="ja-JP" welcomeGreeting="もしもし。こちらは。旅行アシスタントです。ご要件をお話ください。" ttsProvider="google" voice="ja-JP-Standard-B"  />
        </Connect>
     </Response>
    ```
